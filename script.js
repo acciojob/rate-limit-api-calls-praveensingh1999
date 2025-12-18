@@ -9,7 +9,7 @@ function fetchData() {
     return fetch('https://jsonplaceholder.typicode.com/todos/1')
         .then(response => response.json())
         .then(data => {
-            resultsDiv.innerHTML += `<p>${JSON.stringify(data)}</p>`;
+            resultsDiv.innerHTML += `<p>ID: ${data.id}</p>`; // Ensure you display the ID
         })
         .catch(error => console.error('Error fetching data:', error));
 }
